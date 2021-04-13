@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssm.dao.UserDao">
+    <select id="select" resultType="User">
+        select user_id,username, pass, mobile from `ssm_user`
+    </select>
+
+    <insert id="insert">
+        INSERT `ssm_user`(`username`, `pass`,`mobile`) VALUE(#{username}, #{pass}, #{mobile})
+    </insert>
+
+</mapper>
