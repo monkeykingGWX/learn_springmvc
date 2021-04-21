@@ -10,4 +10,11 @@
     </bean>
 
     <context:component-scan base-package="com.annotation" />
+
+    <bean id="banana" class="com.annotation.factory.FruitFactoryBean">
+        <property name="name" value="banana" />
+    </bean>
+    <bean id="apple" class="com.annotation.factory.FruitFactoryBean" lazy-init="true">
+        <property name="name" value="apple" />
+    </bean>
 </beans>
